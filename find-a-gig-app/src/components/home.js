@@ -4,7 +4,9 @@ import { Popover } from 'react-bootstrap';
 
 import MyButton from './mybutton';
 
-function printInfoPopUp () {
+const printInfoPopUp = (e) => {
+    console.log("In printInfoPopUp!");
+    e.preventDefault();
     return (
         <Popover id="popover">
             <Popover.Header as="h3">Find-A-Gig Information</Popover.Header>
