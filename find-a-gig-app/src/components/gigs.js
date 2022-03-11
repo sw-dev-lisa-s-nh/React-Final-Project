@@ -10,7 +10,7 @@ function Gigs (props) {
     const[error, setError] = useState(null);
     const[isLoaded, setIsLoaded] = useState(false);
     const[gig, setGig] = useState([])
-    const[gigInstruments, setGigInstruments] = useState([]);
+   // const[gigInstruments, setGigInstruments] = useState([]);
 
     const createGig = async (newGig) => {
         await gigApi.post(newGig);
@@ -49,12 +49,15 @@ function Gigs (props) {
                 console.log(error);
             }
         )
-
     });
 
     useEffect( () => {
+        // const controller = new AbortController();
+        // const signal = controller.signal;
         runThisEveryTime();
-    }, [])       
+        // This prevents a re-render!
+        // return () => controller.abort();
+    }, []);      
 
     if (error) {
         return <div>An error was encountered: {error.message}</div>
@@ -81,7 +84,9 @@ function Gigs (props) {
                                     <strong>Contact Info: </strong> <span>&nbsp;</span>{g.phone}
                                     <br /><strong>Instruments Requested:</strong> 
                                     <br />
+                                    <ul>
                                     {g.instruments.map( (inst, j) => (
+                                        
                                         <li className="border" key={inst._id}>  &nbsp;
                                              <strong>{inst.name} </strong>
                                         <br />
@@ -89,6 +94,7 @@ function Gigs (props) {
                                             removeGigInstrument(g._id, inst._id)}>Remove </button> 
                                         </li>
                                     ))}
+                                    </ul>
                                 </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>

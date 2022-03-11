@@ -48,7 +48,10 @@ function Users(props) {
     });
 
     useEffect( () => {
+        //const controller = new AbortController();
+        // const signal = controller.signal;
         runThisEveryTime();
+        //return () => controller.abort();
     }, [])
 
     if (error) {
@@ -77,14 +80,18 @@ function Users(props) {
                         <td>{u.lastname}</td>   
                         <td>{u.address}, {u.city}, {u.state}</td>
                         <td>{u.phone}</td>
-                        <td>{u.instruments.map( (inst, j) => (
-                            <p key={inst._id}> {j+1}. &nbsp;
+                        
+                        <td>
+                          <ul>
+                            {u.instruments.map( (inst, j) => (
+                            <li key={inst._id}> &nbsp;
                                 <strong>{inst.name}  </strong>
                             <br />
                             <button className="btn-my-color rounded" onClick={e =>
                                 removeUserInstrument(u._id, inst._id)}>Remove </button>
-                            </p>  
-                        ))}
+                            </li>  
+                            ))}
+                          </ul>
                         </td>
                         <td>
                         <button className="btn-my-color rounded" onClick={e =>
