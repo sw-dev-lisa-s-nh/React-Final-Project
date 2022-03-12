@@ -7,8 +7,8 @@ import { gigApi } from '../rest/GigApi.js';
 
 
 function Gigs (props) {
-    const[error, setError] = useState(null);
-    const[isLoaded, setIsLoaded] = useState(false);
+    const[error] = useState(null);
+    const[setIsLoaded] = useState(false);
     const[gig, setGig] = useState([])
    // const[gigInstruments, setGigInstruments] = useState([]);
 
@@ -114,21 +114,4 @@ function Gigs (props) {
 export default Gigs;
 
 
-
-
-// export const Gig = (props)  => {
-//     const { data } = props;
-//     return data === undefined ? <h1>404 Not Found</h1> : (
-//       <Card>
-//         <Card.Header>{data.name} </Card.Header>
-//         <Card.Body>
-//           <Card.Subtitle>{data.address}</Card.Subtitle>
-//           <Card.Subtitle>{data.phone}</Card.Subtitle>
-//           <Card.Subtitle>{data.date}</Card.Subtitle>
-//           <Card.Text>{data.description} </Card.Text>
-//         </Card.Body>
-//       </Card>
-//     );
-//   }
-  
   

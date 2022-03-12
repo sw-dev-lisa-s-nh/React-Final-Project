@@ -27,7 +27,7 @@ function HomePage (props) {
                 </div> 
             </div>
             <div className="col-md-2 flex mx-auto" >
-                <MyButton className="info-button" label="Extra Information" onClick={printInfoPopUp} />
+                <MyButton className="info-button" onClick={printInfoPopUp} />
             </div>             
         </div>
     )

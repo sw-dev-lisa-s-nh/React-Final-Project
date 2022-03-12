@@ -6,7 +6,7 @@ import { userApi } from '../rest/UserApi.js';
 
 function Users(props) {
     const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [setIsLoaded] = useState(false);
     const [user, setUser] = useState([])
 
     const createUser = async (newUser) => {
