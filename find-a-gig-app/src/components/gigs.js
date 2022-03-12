@@ -8,7 +8,7 @@ import { gigApi } from '../rest/GigApi.js';
 
 function Gigs (props) {
     const[error] = useState(null);
-    const[setIsLoaded] = useState(false);
+    const[isLoaded, setIsLoaded] = useState(false);
     const[gig, setGig] = useState([])
    // const[gigInstruments, setGigInstruments] = useState([]);
 

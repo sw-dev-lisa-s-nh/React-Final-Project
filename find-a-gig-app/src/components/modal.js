@@ -9,20 +9,19 @@ function ModalWindow() {
 
     return(
         <>
-            <button variant="primary" onClick={handleShow}>
+            <button onClick={handleShow}>
                 Find-A-Gig-App
             </button>
 
-            <Modal show={show} onHIde={handleClose}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Find-A-Gig is a way for Musicians connect to Gigs!</Modal.Body>
                 <Modal.Footer>
-                    <button variant="secondary" onClick={handleClose}>
+                    <button  onClick={handleClose}>
                         Close
                     </button>
-
                 </Modal.Footer>
             </Modal>
 

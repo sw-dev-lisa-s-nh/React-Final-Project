@@ -1,21 +1,21 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Popover } from 'react-bootstrap';
+// import { Popover } from 'react-bootstrap';
 
 import MyButton from './mybutton';
 
-const printInfoPopUp = (e) => {
-    console.log("In printInfoPopUp!");
-    e.preventDefault();
-    return (
-        <Popover id="popover">
-            <Popover.Header as="h3">Find-A-Gig Information</Popover.Header>
-            <Popover.Body>
-            This site is used to connect <strong>amazing</strong> musicians, with open Gigs!
-            </Popover.Body>
-        </Popover>  
-    );    
-};
+// const printInfoPopUp = (e) => {
+//     console.log("In printInfoPopUp!");
+//     e.preventDefault();
+//     return (
+//         <Popover id="popover">
+//             <Popover.Header as="h3">Find-A-Gig Information</Popover.Header>
+//             <Popover.Body>
+//             This site is used to connect <strong>amazing</strong> musicians, with open Gigs!
+//             </Popover.Body>
+//         </Popover>  
+//     );    
+// };
 
 
 function HomePage (props) {
@@ -27,7 +27,7 @@ function HomePage (props) {
                 </div> 
             </div>
             <div className="col-md-2 flex mx-auto" >
-                <MyButton className="info-button" onClick={printInfoPopUp} />
+                <MyButton className="info-button" />
             </div>             
         </div>
     )
