@@ -51,12 +51,8 @@ function Gigs (props) {
         )
     });
 
-    useEffect( () => {
-        // const controller = new AbortController();
-        // const signal = controller.signal;
+    useEffect( () => {    
         runThisEveryTime();
-        // This prevents a re-render!
-        // return () => controller.abort();
     }, []);      
 
     if (error) {

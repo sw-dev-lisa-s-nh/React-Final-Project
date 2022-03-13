@@ -53,18 +53,6 @@ function Instruments (props) {
     };
 
 
-
-
-    // const addUserInstrument = async (userId,instId) => {
-    //     await instrumentApi.addUserInstrument(userId, instId);
-    //     runThisEveryTime();
-    // }
-
-    // const addGigInstrument = async (userId,instId) => {
-    //     await instrumentApi.addGigInstrument(userId, instId);
-    //     runThisEveryTime();
-    // }
-
     const runThisEveryTime  = (() => {
         fetch('https://crudcrud.com/api/467446f2b41f4ea58e1a553fd9faaf72/instruments')
         .then( res => res.json() )
